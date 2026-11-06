@@ -16,11 +16,13 @@ import { ProductsModule } from './products/products.module';
 import { MaterialsModule } from './materials/materials.module';
 import { BomModule } from './bom/bom.module';
 import { AppSettingsModule } from './app-settings/app-settings.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
    imports: [
-    ConfigModule.forRoot({
+      ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: '.env',
     }),
 
     TypeOrmModule.forRootAsync({
@@ -39,7 +41,8 @@ import { AppSettingsModule } from './app-settings/app-settings.module';
   ProductsModule,
   MaterialsModule,
   BomModule,
-  AppSettingsModule
+  AppSettingsModule,
+  AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],
