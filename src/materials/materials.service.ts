@@ -102,6 +102,7 @@ export class MaterialsService {
 
   // 6. Get material by ID.
   async findOne(id: string): Promise<Material> {
+    console.log('Finding material with ID:', id);
     const material = await this.materialRepository.findOne({
       where: {
         id,

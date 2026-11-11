@@ -26,7 +26,7 @@ import { PassportModule } from 'node_modules/@nestjs/passport/dist/passport.modu
           'JWT_ACCESS_SECRET',
         ),
         signOptions: {
-          expiresIn: '15m',
+          expiresIn: '7d',
         },
       }),
     }),
